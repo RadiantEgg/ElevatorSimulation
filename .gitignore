@@ -1,0 +1,27 @@
+# 构建目录
+/build/
+
+# 在源码目录里直接跑 cmake 时留下的文件
+/CMakeCache.txt
+/CMakeFiles/
+/cmake_install.cmake
+/CTestTestfile.cmake
+/Testing/
+/Makefile
+/compile_commands.json
+
+# 编译和链接产物
+*.o
+*.obj
+*.a
+*.so
+*.out
+*.exe
+*.d
+*.gch
+*.ilk
+*.pdb
+
+# 测试可执行文件。test/ 里的 .c 源文件仍要保留
+/test/*_test
+/test/*.out
