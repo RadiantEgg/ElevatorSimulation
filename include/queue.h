@@ -9,7 +9,7 @@ typedef enum {
 
 typedef struct QueueNode {
     int id;
-    struct Queue *next;
+    struct QueueNode *next;
 } QueueNode;
 
 typedef struct Queue {
@@ -25,7 +25,5 @@ QueueStatus queue_enqueue(Queue *q, int id);
 QueueStatus queue_dequeue(Queue *q, int *id);
 QueueStatus queue_peek(const Queue *q, int *id);
 
-int queue_is_empty(const Queue *q);
-int queue_size(const Queue *q);
 
 #endif
