@@ -15,8 +15,10 @@ add_library(elevator_core
     src/elevator.c
 )
 
-# sim 需要 main，等 src/sim.c 写好后再加入可执行文件。
-# 每个测试单独 add_executable，并 add_test，放在 test/ 里。
+add_executable(sim src/sim.c)
+target_link_libraries(sim PRIVATE elevator_core)
+
+# 每个测试单独 add_executable，并 add_test，放在 test/ 里
 
 add_executable(test_queue test/test_queue.c)
 target_link_libraries(test_queue PRIVATE elevator_core)
